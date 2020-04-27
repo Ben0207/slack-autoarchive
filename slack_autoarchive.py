@@ -211,7 +211,7 @@ This will bring it back at any point. In the future, you can add '%%noarchive' t
     def join_channel(self, channel_name, channel_id, message):
         """ Joins a channel so that the bot has access to message and archive. """
         join_api_endpoint='channels.join' 
-        message_api_endpoin='channles.message'
+        message_api_endpoin='channels.message'
         join_payload = {'name': channel_name}
         channel_info = self.slack_api_http(api_endpoint=join_api_endpoint, payload=join_payload)
         already_in_channel = channel_info.get('already_in_channel', False)
